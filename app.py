@@ -125,7 +125,7 @@ velocidadeMedia = int(input())
 distancia = tempoViagem * velocidadeMedia
 litrosNecessarios = distancia / 12
 print(f'{litrosNecessarios:.3f}')'''
-'''valor = 1000000
+'''valor = 1000000"
 while valor >= 1000000:
     valor = int(input())
 notas = [100, 50, 20, 10, 5, 2, 1]
@@ -185,3 +185,60 @@ else:
             if user <= valor[1]:
                 print(f'Intervalo ({valor[0]},{valor[1]}]')
                 break'''
+'''codigo, quantidade = map(int, input().split())
+lanches = {1: 4, 2: 4.50, 3: 5, 4: 2, 5: 1.50}
+escolha = lanches[codigo]
+tot = escolha * quantidade
+print(f'Total: R$ {tot:.2f}')'''
+'''a, b, c, d = map(float, input().split())
+pesos = [2, 3, 4, 1]
+media = (2*a + 3*b + 4*c + d) / (sum(pesos))
+print(f'Media: {media:.1f}')
+if media >= 7:
+    print('Aluno aprovado.')
+elif media < 5:
+    print('Aluno reprovado.')
+elif 5 <= media < 7:
+    print('Aluno em exame.')
+    notaExame = float(input())
+    print(f'Nota do exame: {notaExame:.1f}')
+    novaNota = (notaExame + media) / 2
+    if novaNota >= 5:
+        print('Aluno aprovado.')
+        print(f'Media final: {novaNota:.1f}')
+    elif novaNota < 5:
+        print('Aluno reprovado.')
+        print(f'Media final: {novaNota:.1f}')'''
+'''x, y = map(float, input().split())
+if x == 0 and y == 0:
+    print('Origem')
+elif x == 0:
+    print('Eixo Y')
+elif y == 0:
+    print('Eixo X')
+elif x > 0 and y > 0:
+    print('Q1')
+elif x < 0 and y > 0:
+    print('Q2')
+elif x < 0 and y < 0:
+    print('Q3')
+elif x > 0 and y < 0:
+    print('Q4')'''
+'''a, b, c = map(int, input().split())
+lista = [a, b, c]
+listad = sorted(lista)
+for elemento in listad:
+    print(elemento)
+print('')
+for elemento in lista:
+    print(elemento)'''
+'''a, b, c = map(float, input().split())
+lista = [a, b, c]
+maiorNumero = max(lista)
+lista.remove(maiorNumero)
+if sum(lista) > maiorNumero or a == b == maiorNumero:
+    perimetro = sum(lista) + maiorNumero
+    print(f'Perimetro = {perimetro:.1f}')
+else:
+    area = (a + b) * c / 2
+    print(f'Area = {area:.1f}')'''
