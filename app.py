@@ -242,3 +242,42 @@ if sum(lista) > maiorNumero or a == b == maiorNumero:
 else:
     area = (a + b) * c / 2
     print(f'Area = {area:.1f}')'''
+'''a, b = map(int, input().split())
+if b % a == 0 or a % b == 0:
+    print('Sao Multiplos')
+else:
+    print('Nao sao Multiplos')'''
+a, b, c = map(float, input().split())
+lista = [a, b, c]
+newlista = []
+cont = 0
+'''lista.sort(reverse=True)'''
+while len(lista) > 0:
+    newlista.append(max(lista))
+    lista.remove(max(lista))
+a, b, c = newlista
+'''if newlista[0] >= newlista[1] + newlista[2]:
+    print('NAO FORMA TRIANGULO')
+elif newlista[0]**2 == newlista[1]**2 + newlista[2]**2:
+    print('TRIANGULO RETANGULO')
+elif newlista[0]**2 > newlista[1]**2 + newlista[2]**2:
+    print('TRIANGULO OBTUSANGULO')
+elif newlista[0]**2 < newlista[1]**2 + newlista[2]**2:
+    print('TRIANGULO ACUTANGULO')
+if newlista[0] == newlista[1] == newlista[2]:
+    print('TRIANGULO EQUILATERO')
+elif newlista[0] == newlista[1] != newlista[2] or newlista[0] == newlista[2] != newlista[1] or newlista[2] == newlista[1] != newlista[0]:
+    print('TRIANGULO ISOSCELES')'''
+if a >= b + c:
+    print('NAO FORMA TRIANGULO')
+else:
+    if a**2 == b**2 + c**2:
+        print('TRIANGULO RETANGULO')
+    if a**2 > b**2 + c**2:
+        print('TRIANGULO OBTUSANGULO')
+    if a**2 < b**2 + c**2:
+        print('TRIANGULO ACUTANGULO')
+    if a == b == c:
+        print('TRIANGULO EQUILATERO')
+    elif a == b or a == c or b == c:
+        print('TRIANGULO ISOSCELES')
