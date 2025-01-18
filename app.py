@@ -247,37 +247,47 @@ if b % a == 0 or a % b == 0:
     print('Sao Multiplos')
 else:
     print('Nao sao Multiplos')'''
-a, b, c = map(float, input().split())
+'''a, b, c = map(float, input().split())
 lista = [a, b, c]
 newlista = []
 cont = 0
-'''lista.sort(reverse=True)'''
+#lista.sort(reverse=True) dava para ter feito isso, mas preferi ir pela lógica
 while len(lista) > 0:
     newlista.append(max(lista))
     lista.remove(max(lista))
 a, b, c = newlista
-'''if newlista[0] >= newlista[1] + newlista[2]:
-    print('NAO FORMA TRIANGULO')
-elif newlista[0]**2 == newlista[1]**2 + newlista[2]**2:
-    print('TRIANGULO RETANGULO')
-elif newlista[0]**2 > newlista[1]**2 + newlista[2]**2:
-    print('TRIANGULO OBTUSANGULO')
-elif newlista[0]**2 < newlista[1]**2 + newlista[2]**2:
-    print('TRIANGULO ACUTANGULO')
-if newlista[0] == newlista[1] == newlista[2]:
-    print('TRIANGULO EQUILATERO')
-elif newlista[0] == newlista[1] != newlista[2] or newlista[0] == newlista[2] != newlista[1] or newlista[2] == newlista[1] != newlista[0]:
-    print('TRIANGULO ISOSCELES')'''
 if a >= b + c:
     print('NAO FORMA TRIANGULO')
+elif a**2 == b**2 + c**2:
+    print('TRIANGULO RETANGULO')
+elif a**2 > b**2 + c**2:
+    print('TRIANGULO OBTUSANGULO')
+elif a**2 < b**2 + c**2:
+    print('TRIANGULO ACUTANGULO')
+if a == b == c:
+    print('TRIANGULO EQUILATERO')
+elif a == b != c or a == c != b or c == b != a:
+    print('TRIANGULO ISOSCELES')'''
+'''horaInicial, horaFinal = map(int, input().split())
+horas = 0
+if horaInicial == horaFinal and horas == 0:
+    horas = 24
 else:
-    if a**2 == b**2 + c**2:
-        print('TRIANGULO RETANGULO')
-    if a**2 > b**2 + c**2:
-        print('TRIANGULO OBTUSANGULO')
-    if a**2 < b**2 + c**2:
-        print('TRIANGULO ACUTANGULO')
-    if a == b == c:
-        print('TRIANGULO EQUILATERO')
-    elif a == b or a == c or b == c:
-        print('TRIANGULO ISOSCELES')
+    while horaInicial != horaFinal:
+        horaInicial += 1
+        if horaInicial > 23:
+            horaInicial = 0
+        horas += 1
+print(f'O JOGO DUROU {horas} HORA(S)')'''
+'''horaInicial, minutoInicial, horaFinal, minutoFinal = map(int, input().split())
+horas = 0
+minutos = 0
+if horaFinal * 60 + minutoFinal < horaInicial * 60 + minutoInicial:
+    tempo = ((horaFinal + 24) * 60 + minutoFinal)-(horaInicial * 60 + minutoInicial)
+else:
+    tempo = ((horaFinal * 60) + minutoFinal)-((horaInicial * 60) + minutoInicial) 
+horas = tempo // 60
+minutos = tempo % 60
+if horaInicial == horaFinal and minutoInicial == minutoFinal:
+        horas = 24
+print(f'O JOGO DUROU {horas} HORA(S) E {minutos} MINUTO(S)')'''
